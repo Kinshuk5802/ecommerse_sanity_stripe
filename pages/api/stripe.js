@@ -10,6 +10,12 @@ export default async function handler(req, res) {
         mode: 'payment',
         payment_method_types: ['card'],
         billing_address_collection: 'auto',
+        phone_number_collection: {
+          enabled: true,
+        },
+        shipping_address_collection: {
+          allowed_countries: ['IN'],
+        },
         shipping_options: [
           { shipping_rate: 'shr_1L4mWRSDYV1Bw0KByOCMDJL6' },
           { shipping_rate: 'shr_1L4mYdSDYV1Bw0KBJ8lIMWEN' },
